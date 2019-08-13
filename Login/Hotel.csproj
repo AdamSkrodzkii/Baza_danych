@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85AA8E0E-E93F-4276-BEA3-60C91B89F9F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Login</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCAttractions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAttractions.Designer.cs">
+      <DependentUpon>UCAttractions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCContact.Designer.cs">
+      <DependentUpon>UCContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInformation.Designer.cs">
+      <DependentUpon>UCInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCReservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReservation.Designer.cs">
+      <DependentUpon>UCReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCReservation_room_container.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReservation_room_container.Designer.cs">
+      <DependentUpon>UCReservation_room_container.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRegister.Designer.cs">
+      <DependentUpon>UCRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLogin.Designer.cs">
+      <DependentUpon>UCLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCReservation_activity_container.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReservation_activity_container.Designer.cs">
+      <DependentUpon>UCReservation_activity_container.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRoom.Designer.cs">
+      <DependentUpon>UCRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRoom_callendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRoom_callendar.Designer.cs">
+      <DependentUpon>UCRoom_callendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSettings.Designer.cs">
+      <DependentUpon>UCSettings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAttractions.resx">
+      <DependentUpon>UCAttractions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCContact.resx">
+      <DependentUpon>UCContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInformation.resx">
+      <DependentUpon>UCInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCReservation.resx">
+      <DependentUpon>UCReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCReservation_activity_container.resx">
+      <DependentUpon>UCReservation_activity_container.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCReservation_room_container.resx">
+      <DependentUpon>UCReservation_room_container.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRegister.resx">
+      <DependentUpon>UCRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLogin.resx">
+      <DependentUpon>UCLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRoom.resx">
+      <DependentUpon>UCRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRoom_callendar.resx">
+      <DependentUpon>UCRoom_callendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSettings.resx">
+      <DependentUpon>UCSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atrakcje_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_hanger_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\0.jpg" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <None Include="Images\hamburger_30px.png" />
+    <None Include="Images\broom_30px.png" />
+    <None Include="Images\alarm_clock_30px.png" />
+    <None Include="Images\arrow_10px.png" />
+    <Content Include="Images\Batman.png" />
+    <None Include="Images\kajaki.jpg" />
+    <None Include="Images\sala.jpg" />
+    <None Include="Images\rowery2.jpg" />
+    <None Include="Images\konie2.jpg" />
+    <None Include="Images\jezioro1.jpg" />
+    <None Include="Images\exit_sign_50px.png" />
+    <None Include="Images\jeziros.jpg" />
+    <None Include="Images\kolarstwo.jpg" />
+    <None Include="Images\jazda_na_koniu.jpg" />
+    <None Include="Images\spływ_kajakowy.jpg" />
+    <None Include="Images\paddle_60px.png" />
+    <None Include="Images\bicycle_52px.png" />
+    <None Include="Images\football_52px.png" />
+    <None Include="Images\cancel_attraction_26px.png" />
+    <None Include="Images\sleeping_in_bed_52px.png" />
+    <None Include="Images\Bed.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
