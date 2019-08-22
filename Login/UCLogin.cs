@@ -31,7 +31,7 @@ namespace Login
 
         private void timer_error_Tick(object sender, EventArgs e)
         {
-            if (counter < 6) counter++;
+            if (counter < 5) counter++;
             else
             {
                 counter = 0;
