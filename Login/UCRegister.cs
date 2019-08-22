@@ -76,13 +76,32 @@ namespace Register
             if (is_client == true)
                 {
                     is_client = false;
-                    pnl_organisation.BringToFront();
-                    pictureBox1.ImageLocation = @"..\..\Images\checkmark_50px.png";
+                txt_company_name.Enabled = true;
+                txt_company_post.Enabled = true;
+                txt_company_street.Enabled = true;
+                txt_company_town.Enabled = true;
+
+                lbl_company_.Enabled = true;
+                lbl_company_name.Enabled = true;
+                lbl_company_post.Enabled = true;
+                lbl_company_street.Enabled = true;
+                lbl_company_town.Enabled = true;
+
+                pictureBox1.ImageLocation = @"..\..\Images\checkmark_50px.png";
                 }
             else
             {
+                txt_company_name.Enabled = false;
+                txt_company_post.Enabled = false;
+                txt_company_street.Enabled = false;
+                txt_company_town.Enabled = false;
+
+                lbl_company_.Enabled = false;
+                lbl_company_name.Enabled = false;
+                lbl_company_post.Enabled = false;
+                lbl_company_street.Enabled = false;
+                lbl_company_town.Enabled = false;
                 is_client = true;
-                pnl_client.BringToFront();
                 pictureBox1.ImageLocation = null;
             }
         }
