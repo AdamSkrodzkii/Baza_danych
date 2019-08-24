@@ -42,7 +42,7 @@
             this.btn_Exit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_time = new System.Windows.Forms.Label();
-            this.txt_name = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Timer_time = new System.Windows.Forms.Timer(this.components);
             this.pnl_Container = new System.Windows.Forms.Panel();
@@ -235,7 +235,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.panel3.Controls.Add(this.txt_time);
-            this.panel3.Controls.Add(this.txt_name);
+            this.panel3.Controls.Add(this.lbl_name);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(176, 45);
@@ -254,16 +254,16 @@
             this.txt_time.TabIndex = 2;
             this.txt_time.Text = "HH:MM:SS";
             // 
-            // txt_name
+            // lbl_name
             // 
-            this.txt_name.AutoSize = true;
-            this.txt_name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txt_name.ForeColor = System.Drawing.Color.White;
-            this.txt_name.Location = new System.Drawing.Point(72, 16);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(102, 19);
-            this.txt_name.TabIndex = 1;
-            this.txt_name.Text = "Imię i nazwisko";
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_name.ForeColor = System.Drawing.Color.White;
+            this.lbl_name.Location = new System.Drawing.Point(72, 16);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(102, 19);
+            this.lbl_name.TabIndex = 1;
+            this.lbl_name.Text = "Imię i nazwisko";
             // 
             // label1
             // 
@@ -315,7 +315,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label txt_name;
+        private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_contact;

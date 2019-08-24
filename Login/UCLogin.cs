@@ -13,7 +13,6 @@ namespace Login
     public partial class UCLogin : UserControl
     {
         int counter = 0;
-
         public UCLogin()
         {
             InitializeComponent();
@@ -48,9 +47,19 @@ namespace Login
         private void Btn_login_Click(object sender, EventArgs e)
         {
             Main_form.Main app = new Main_form.Main();
+            app.TopName = textBox_Login.Text;
             Account.Form_Account.Instance_acc.Hide();
             app.ShowDialog();
             Account.Form_Account.Instance_acc.Close();
+        }
+
+        private void textBox_Login_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox_password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Main_form
 {
     public partial class Main : Form
     {
+        public string TopName;
         static Main _object;
 
         public static Main Instance_main
@@ -34,7 +35,6 @@ namespace Main_form
 
         public Main()
         {
-            
             InitializeComponent();
             Timer_time.Start();
         }
@@ -58,6 +58,7 @@ namespace Main_form
 
         private void Main_Load(object sender, EventArgs e)
         {
+            lbl_name.Text = TopName;
             _object = this;
 
             Home.UCHome _Home = new Home.UCHome();
@@ -130,5 +131,6 @@ namespace Main_form
             pnl_slider.Top = btn_settings.Top - 5;
             pnlContainerMain.Controls["UCSettings"].BringToFront();
         }
+        
     }
 }

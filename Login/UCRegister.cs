@@ -12,37 +12,26 @@ namespace Register
 {
     public partial class UCRegister : UserControl
     {
-        bool is_client = true;
+        bool if_clicked = true;
         public UCRegister()
         {
             InitializeComponent();
         }
 
-        private void Txt_login_Click(object sender, EventArgs e)
+        private void lbl_login_Click(object sender, EventArgs e)
         {
             Account.Form_Account.Instance_acc.PnlContainer.Controls["UCLogin"].BringToFront();
         }
 
         private void But_rejestr_Click(object sender, EventArgs e)
         {
-            if
-                (
-                    txt_email.Text == "" ||
-            Txt_login.Text == ""||
-            txt_name.Text == ""||
-            txt_password.Text == "" ||
-            txt_password_repeat.Text == "" ||
-            txt_password_repeat.Text != txt_password.Text ||
-            txt_phone.Text == "" ||
-            txt_post.Text == "" ||
-            txt_street.Text == "" ||
-            txt_surname.Text == "" ||
-            txt_town.Text == "" 
-                )
+            // Jezeli cos nie jest takie jak trzeba to ma odpalić timer_error
+            if (txt_password != txt_password_repeat)
             {
-                txt_error.Visible = false;
+                timer_error.Start();
             }
 
+            // jeżeli wszystko jest jak należy to przechodzi do okna login i wyświetla komunikat
             else
             {
                 Account.Form_Account.Instance_acc.PnlContainer.Controls["UCLogin"].BringToFront();
@@ -54,7 +43,18 @@ namespace Register
         private void timer_error_Tick(object sender, EventArgs e)
         {
             int counter = 0;
-            if (counter < 5) counter++;
+            txt_login.BackColor = System.Drawing.Color.Red;
+            txt_password.BackColor = System.Drawing.Color.Red;
+            txt_password_repeat.BackColor = System.Drawing.Color.Red;
+
+            if(counter == 2)
+            {
+                txt_login.BackColor = System.Drawing.Color.White;
+                txt_password.BackColor = System.Drawing.Color.White;
+                txt_password_repeat.BackColor = System.Drawing.Color.White;
+            }
+
+            if (counter < 6) counter++;
             else
             {
                 txt_error.Visible = false;
@@ -73,35 +73,18 @@ namespace Register
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (is_client == true)
-                {
-                    is_client = false;
-                txt_company_name.Enabled = true;
-                txt_company_post.Enabled = true;
-                txt_company_street.Enabled = true;
-                txt_company_town.Enabled = true;
-
-                lbl_company_.Enabled = true;
-                lbl_company_name.Enabled = true;
-                lbl_company_post.Enabled = true;
-                lbl_company_street.Enabled = true;
-                lbl_company_town.Enabled = true;
-
+            if (if_clicked == true)
+            {
+                if_clicked = false;
+                lbl_name.Left += 19;
+                lbl_name.Text = "Nazwa firmy:";
                 pictureBox1.ImageLocation = @"..\..\Images\checkmark_50px.png";
-                }
+            }
             else
             {
-                txt_company_name.Enabled = false;
-                txt_company_post.Enabled = false;
-                txt_company_street.Enabled = false;
-                txt_company_town.Enabled = false;
-
-                lbl_company_.Enabled = false;
-                lbl_company_name.Enabled = false;
-                lbl_company_post.Enabled = false;
-                lbl_company_street.Enabled = false;
-                lbl_company_town.Enabled = false;
-                is_client = true;
+                if_clicked = true;
+                lbl_name.Left -= 19;
+                lbl_name.Text = "Imię i nazwisko:";
                 pictureBox1.ImageLocation = null;
             }
         }
@@ -110,5 +93,7 @@ namespace Register
         {
 
         }
+
+       
     }
 }

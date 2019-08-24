@@ -44,6 +44,7 @@
             this.btn_hamburger = new System.Windows.Forms.Button();
             this.lbl_counter = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_container_lodger = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -190,6 +191,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(355, 256);
             this.panel1.TabIndex = 15;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_add
             // 
@@ -263,23 +265,33 @@
             // 
             this.pictureBox1.BackgroundImage = global::Login.Properties.Resources.Bed;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(471, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(494, 66);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(435, 404);
+            this.pictureBox1.Size = new System.Drawing.Size(397, 409);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnl_container_lodger
+            // 
+            this.pnl_container_lodger.AutoScroll = true;
+            this.pnl_container_lodger.Location = new System.Drawing.Point(452, 46);
+            this.pnl_container_lodger.Name = "pnl_container_lodger";
+            this.pnl_container_lodger.Size = new System.Drawing.Size(471, 456);
+            this.pnl_container_lodger.TabIndex = 16;
             // 
             // UCRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pnl_container_lodger);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.list_amount);
             this.Controls.Add(this.btn_next);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "UCRoom";
             this.Size = new System.Drawing.Size(923, 534);
+            this.Load += new System.EventHandler(this.UCRoom_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -306,5 +318,6 @@
         private System.Windows.Forms.Button btn_broom;
         private System.Windows.Forms.Button btn_hamburger;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Panel pnl_container_lodger;
     }
 }

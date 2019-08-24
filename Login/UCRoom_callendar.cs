@@ -12,6 +12,7 @@ namespace Room
 {
     public partial class UCRoom_callendar : UserControl
     {
+        int amount_of_rezervations = 0;                                 // Dobrze by było aby ta wartość pokazywała sumę wszystkich rezerwacji
         bool poczatek = true;
         public UCRoom_callendar()
         {
@@ -33,8 +34,13 @@ namespace Room
         {
             Room.UCRoom.Instance_room._container.Controls["txt_date_from"].Text = lbl_start.Text;
             Room.UCRoom.Instance_room._container.Controls["txt_date_to"].Text = lbl_end.Text;
+
+            // tutaj dodawana jest nowa rezerwacja
+
+            Room.UCRoom.Instance_room._container.Name = string.Format("rezerwacja {0}", amount_of_rezervations);
             Main_form.Main.Instance_main.pnlContainerMain.Controls["UCReservation"].Controls.Add(Room.UCRoom.Instance_room._container);
-            Main_form.Main.Instance_main.pnlContainerMain.Controls["UCReservation"].Controls["UCRoom_container"].Location = new System.Drawing.Point(56, 25);
+            Main_form.Main.Instance_main.pnlContainerMain.Controls["UCReservation"].Controls[string.Format("rezerwacja {0}", amount_of_rezervations)].Top = amount_of_rezervations * 180 + 15;
+            Main_form.Main.Instance_main.pnlContainerMain.Controls["UCReservation"].Controls[string.Format("rezerwacja {0}", amount_of_rezervations)].Left = 75;
             Main_form.Main.Instance_main.pnlContainerMain.Controls["UCReservation"].BringToFront();
         }
     }

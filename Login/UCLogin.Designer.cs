@@ -74,6 +74,7 @@
             this.textBox_Login.Name = "textBox_Login";
             this.textBox_Login.Size = new System.Drawing.Size(138, 20);
             this.textBox_Login.TabIndex = 10;
+            this.textBox_Login.TextChanged += new System.EventHandler(this.textBox_Login_TextChanged);
             // 
             // Txt_remind
             // 
@@ -114,6 +115,7 @@
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.Size = new System.Drawing.Size(138, 20);
             this.textBox_password.TabIndex = 12;
+            this.textBox_password.TextChanged += new System.EventHandler(this.textBox_password_TextChanged);
             // 
             // pictureBox1
             // 

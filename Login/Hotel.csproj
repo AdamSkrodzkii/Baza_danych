@@ -131,6 +131,12 @@
     <Compile Include="UCRoom_callendar.Designer.cs">
       <DependentUpon>UCRoom_callendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCRoom_lodger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRoom_lodger.Designer.cs">
+      <DependentUpon>UCRoom_lodger.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCRoom_callendar.resx">
       <DependentUpon>UCRoom_callendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRoom_lodger.resx">
+      <DependentUpon>UCRoom_lodger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCSettings.resx">
       <DependentUpon>UCSettings.cs</DependentUpon>
